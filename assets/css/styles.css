@@ -11,9 +11,9 @@
 .color4 {color: #1d5894;}
 .color5 {color: #4ca2c8;}
 
-/* Fuentes */
+/* FUENTES */
 
-/* PARTIDOS */
+/* PARA CLASE "PARTIDOS" */
 .titillium-web-regular {
     font-family: "Titillium Web", sans-serif;
     font-weight: 400;
@@ -21,7 +21,7 @@
     color: #152065;
 }
 
-/* TITULOS LLAVES*/
+/* PARA CLASES "TITULOS LLAVES" */
 .titillium-web-bold {
     font-family: "Titillium Web", sans-serif;
     font-weight: 700;
@@ -30,7 +30,7 @@
     font-size: 1.5rem;
 }
 
-/* TITULO PAGINA */
+/* PARA H1 */
 .oswald {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
@@ -40,7 +40,7 @@
   font-size: 2.2rem;
 }
 
-/* LISTA NAV */
+/* PARA LISTA NAV */
 .kanit-extralight {
     font-family: "Kanit", sans-serif;
     font-weight: 300;
@@ -48,8 +48,39 @@
     color: #1d5894;
     font-size: 1.2rem;
 }
-  
-/* Estilos */
+
+/* ANIMACIONES :HOVER */
+.card:hover{
+    .ganadoresR{ 
+        transform: scale(1.25) translate(-65px);
+    }
+    .ganadoresL{ 
+        transform: scale(1.25) translate(65px);
+    }
+    .perdedores{
+        transform: scale(0);
+    }
+    .fechas{
+        transform: scale(0);
+    }
+    .ida-vuelta{
+        transform: scale(0);
+    }
+    .back{
+        transform: scale(1) translateY(-100px); 
+    }
+}
+
+ul a:hover{
+    background-color: #1d5894;
+    color:#d9c183;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* ESTILOS */
+
+/* BODY Y HEADER */
 
 body{
     display: grid;
@@ -69,31 +100,6 @@ header{
     background-color: #e1e2c7;
 }
 
-h1{
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-.top{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main{
-    grid-area: principal;
-    display: flex;
-    flex-direction: column;
-    background-color: #d3d798;
-    padding-bottom: 1rem;
-}
-
-header div{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .logo{
     width: 7rem;
 }
@@ -109,6 +115,34 @@ header ul{
 header ul a{
     text-decoration: none;
     text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+header div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN */
+
+main{
+    grid-area: principal;
+    display: flex;
+    flex-direction: column;
+    background-color: #d3d798;
+    padding-bottom: 1rem;
 }
 
 .titulos{
@@ -131,41 +165,19 @@ header ul a{
 }
 
 .ganadoresR{
-    transition: all 2s ease-in-out;
+    transition: all 1.5s ease-in-out;
 }
 
 .ganadoresL{
-    transition: all 2s ease-in-out;
+    transition: all 1.5s ease-in-out;
 }
 
 .perdedores{
-    transition: all 2s ease-in-out;
-}
-
-/* Animaciones :hover*/
-.card:hover{
-    .ganadoresR{ 
-        transform: scale(1.25) translate(-65px);
-    }
-    .ganadoresL{ 
-        transform: scale(1.25) translate(65px);
-    }
-    .perdedores{
-        transform: scale(0);
-    }
-    .fechas{
-        transform: scale(0);
-    }
-    .ida-vuelta{
-        transform: scale(0);
-    }
-    .back{
-        transform: scale(1) translateY(-100px); 
-    }
+    transition: all 1.5s ease-in-out;
 }
 
 .fechas{
-    transition: all 2s ease-in-out;
+    transition: all 1.5s ease-in-out;
     text-align: center;
     margin-top: 0.5rem;
 }
@@ -195,13 +207,12 @@ header ul a{
 }
 
 .ida-vuelta{
-    transition: all 2s ease-in-out;
+    transition: all 1.5s ease-in-out;
     display: flex;
     flex-direction: column;
     text-align: center;
 
 }
-
 
 .resultados{
     display: flex;
@@ -213,7 +224,7 @@ header ul a{
 }
 
 .back{
-    transition: all 2s ease-in-out;
+    transition: all 1.5s ease-in-out;
     transform: scale(0) translateY(-50px);
     display: flex;
     flex-direction: column;
@@ -223,12 +234,41 @@ header ul a{
     font-size: 1.2rem;
 }
 
+/* FOOTER */
+
 footer{
     grid-area: pie;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color:#d9c183;
+}
+
+footer p{
+    font-size: 1.2rem;
+    color: #1d5894;
+}
+
+footer i{
+    font-size: 2rem;
+    color: #1d5894;
+}
+
+.fa-copyright{
+    font-size: 1.2rem;
+}
+
+.website{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.website a{
+    text-decoration: none;
+    color: #1d5894;
 }
 
 .copyright{
@@ -243,24 +283,24 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     margin: 0.5rem 0 0 0;
     padding-bottom: 0.5rem;
 }
 
 
-/* Medias querys */
+/* MEDIAS QUERYS */
 @media (min-width: 576px) {
     body{
         grid-template-areas: 
         "cabecera principal"
         "cabecera principal"
-        "pie pie";
+        "cabecera pie";
         grid-template-columns: 1fr 9fr;
         grid-template-rows: 
         8fr 
         8fr 
-        2fr ;
+        1fr ;
         height: 100%;
     }
 
@@ -272,9 +312,17 @@ footer{
         flex-direction: column;      
     }
 
+    header{
+        width: 10rem;
+    }
+
+    header div, ul{
+        position: fixed;
+    }
+
     ul{
         flex-direction: column;
-        margin-top: 6rem;
+        margin-top: 15rem;
     }
 
     .partidos{
